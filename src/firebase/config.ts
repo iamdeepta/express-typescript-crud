@@ -1,9 +1,11 @@
 import admin from "firebase-admin";
 
-const serviceAccount = require("../express-typescript-crud-service-private-key.json");
+import serviceAccount from "../express-typescript-crud-service-private-key.json";
+
+const service_account: any = serviceAccount;
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(service_account),
 });
 
 const db = admin.firestore();

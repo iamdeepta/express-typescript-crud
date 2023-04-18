@@ -4,8 +4,10 @@
   "description": "A simple crud application using express, typescript and firestore",
   "main": "index.js",
   "scripts": {
-    "build": "yarn tsc",
-    "start": "node dist/index.js",
+    "start": "nodemon src/index.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
     "dev": "concurrently \"yarn tsc --watch\" \"nodemon dist/index.js\""
   },
   "repository": {
@@ -29,6 +31,13 @@
     "@types/express": "^4.17.17",
     "@types/node": "^18.15.11",
     "concurrently": "^8.0.1",
-    "nodemon": "^2.0.22"
-  }
+    "nodemon": "^2.0.22",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^5.0.0"
+  },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ]
 }

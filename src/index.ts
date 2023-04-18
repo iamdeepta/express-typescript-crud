@@ -12,11 +12,11 @@ const port: string | undefined = process.env.PORT;
 app.use(express.json());
 
 //routes
+app.use("/api", [userRoutes]);
+
 app.use("/", (req: Request, res: Response) => {
   res.send("Welcome to express-typescript-crud api");
 });
-
-app.use("/api", [userRoutes]);
 
 app.listen(port, () => {
   console.log(`API is working on port ${port}`);
