@@ -12,3 +12,4 @@ router.get("/v1/users/:id", user_1.getUser);
 router.put("/v1/users/:id", user_1.updateUser);
 router.delete("/v1/users/:id", user_1.deleteUser);
 exports.default = router;
+//# sourceMappingURL=users.js.map

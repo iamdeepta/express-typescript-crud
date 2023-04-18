@@ -6,3 +6,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.User = void 0;
 const config_1 = __importDefault(require("../config"));
 exports.User = config_1.default.collection("users");
+//# sourceMappingURL=User.js.map

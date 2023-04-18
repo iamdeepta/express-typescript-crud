@@ -11,3 +11,4 @@ firebase_admin_1.default.initializeApp({
 });
 const db = firebase_admin_1.default.firestore();
 exports.default = db;
+//# sourceMappingURL=config.js.map

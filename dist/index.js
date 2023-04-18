@@ -19,3 +19,4 @@ app.use("/", (req, res) => {
 app.listen(port, () => {
     console.log(`API is working on port ${port}`);
 });
+//# sourceMappingURL=index.js.map
