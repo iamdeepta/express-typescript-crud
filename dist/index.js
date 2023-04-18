@@ -12,6 +12,9 @@ const port = process.env.PORT;
 //middlewares
 app.use(express_1.default.json());
 //routes
+app.use("/", (req, res) => {
+    res.send("Welcome to express-typescript-crud api");
+});
 app.use("/api", [users_1.default]);
 app.listen(port, () => {
     console.log(`API is working on port ${port}`);

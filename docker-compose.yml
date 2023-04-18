@@ -1,0 +1,17 @@
+version: '1'
+
+services:
+  express-typescript-crud:
+    environment:
+      - NODE_ENV=development
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    container_name: express-typescript-crud
+    expose:
+      - '8000'
+    ports:
+      - '8000:8000'
+    command: yarn dev

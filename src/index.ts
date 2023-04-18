@@ -1,4 +1,4 @@
-import express, { Express } from "express";
+import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import userRoutes from "./routes/users";
 
@@ -12,6 +12,10 @@ const port: string | undefined = process.env.PORT;
 app.use(express.json());
 
 //routes
+app.use("/", (req: Request, res: Response) => {
+  res.send("Welcome to express-typescript-crud api");
+});
+
 app.use("/api", [userRoutes]);
 
 app.listen(port, () => {
