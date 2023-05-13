@@ -1,2 +1,4 @@
 /node_modules
 .env
+src/express-typescript-crud-service-private-key.json
+dist/express-typescript-crud-service-private-key.json
